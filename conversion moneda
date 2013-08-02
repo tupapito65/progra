@@ -1,0 +1,26 @@
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : LUIS ALBERTO ANTELO MERCADO
+// Fecha      : 2 DE AGOSTO 2013
+//Descripcion :Programa que cambia de bolivianos a dolares.
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+void main()
+{float monto, cambio,dolares; 
+   printf("\t\tCAMBIO DOLARES A BOLICIANOS  \n");
+   printf("\t\t-----------------------------\n\n");
+   printf("\n\n ingrese el monto que desea cambiar: ");
+   scanf("%f",&monto);
+   cambio=6.95;
+   if("monto>0")
+     {dolares=monto/cambio;
+     }
+   else
+    {printf("\ningree valores validos\n");
+    }
+   printf("\nEl monto %f Bs. en dolares es %f $\n\n",monto,dolares);
+
+   getch();
+}
