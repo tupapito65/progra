@@ -1,0 +1,36 @@
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : LUIS ALBERTO ANTELO MERCADO
+// Fecha      : 2 DE AGOSTO 2013
+// Descripcion: Sucesion del tipo 1+X+2X^2+3X^3+5X^5+8X^8...
+
+#include "stdafx.h"
+#include "math.h"
+#include "conio.h"
+#include "stdio.h"
+
+
+void main ()
+{int a,b,c,n,i; float x; double suma, aux;
+a=0;
+b=1;
+suma=1;
+aux=1;/*primer termino de la sucesion*/
+printf("\n----------------------SUCESION---------------------");
+printf("\n---------------------------------------------------");
+printf("\n Defina cantidad de terminos: ");
+scanf("%d",&n);
+printf("\n Defina x: ");
+scanf("%f",&x);
+printf("\ntermino 1=%f",aux);
+for(i=1;i<n;i++)
+  {c=a+b;
+    aux=c*pow(x,c);/*termino que se ira acumulando*/
+    suma=suma+aux;/*acumulacion de n terminos*/
+  a=b;
+	b=c;
+	printf("\ntermino %d=%f", i+1,aux);
+    }
+printf("\nSumatoria de %d terminos=%f\n\n\n", n,suma);
+printf("\-------------------------FIN------------------------\n");
+getch();
+}
