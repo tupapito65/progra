@@ -1,0 +1,77 @@
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : LUIS ALBERTO ANTELO MERCADO
+// Fecha      : 2 DE AGOSTO 2013
+//Descripcion :Programa que calcula las ganancias que un teatro deja de percibir por descuentos segun las sgte. tabla:
+
+// 5  a 14 años   : 35% descuento.                                     
+// 15 a 19 años   : 25% descuento.                                    
+// 20 a 45 años   : 10% descuento.                                                    
+// 40 a 65 años   : 25% descuento.                                     
+// 66 en adelante : 35% descuento.    
+
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+
+void main()
+{ float precio,total1,total2,total3,total4,total5,total6,acumulador1,acumulador2,acumulador3,acumulador4,acumulador5;;
+  int n, i ,cliente;
+  acumulador1=0;
+  acumulador2=0;
+  acumulador3=0;
+  acumulador4=0;
+  acumulador5=0;
+  i=0;
+  printf("\n TEATRO\n");
+  printf("\n***************************");
+  printf("\n\ningrese la cantidad de clientes\n");
+  scanf("%d",&n);
+  printf("\ningrese el precio de la entrada\n");
+  scanf("%f",&precio);
+  while(n!=i)
+  { printf("\ningrese la edad del cliente\n");
+      scanf("%d", &cliente);
+      if(cliente>= 5 && cliente<= 14)
+     {total1=precio*0.35;
+      acumulador1=acumulador1+total1;
+     }
+	  else 
+	    { 
+		  if(cliente>=15 && cliente <=19)
+		  {total2=precio*0.25;
+          acumulador2=acumulador2+total2;
+	      }
+		  else 
+		  {   if (cliente >=20 && cliente <= 45)
+	           { total3=precio*0.10;
+	           acumulador3=acumulador3+total3;  
+	           }
+		  else
+		  { if(cliente >=46 && cliente<=65)
+	             {total4=precio*0.25;
+	              acumulador4=acumulador4+total4;
+	              }
+			 else
+			     {if(cliente >=66 && cliente <= 120)
+	               {total5= precio*0.35;
+	               acumulador5=acumulador5+total5;
+	                }
+				else 
+					printf("los fantasmas no pueden entrar al teatro");
+		          }
+	         }
+	    }  
+	  }
+	i=i+1;
+  }
+  total6=acumulador1+acumulador2+acumulador3+acumulador4+acumulador5;
+  printf("\n\nel teatro con la categoria 1 pierde: %f Bs.", acumulador1);
+  printf("\n\nel teatro con la categoria 2 pierde: %f Bs.", acumulador2);
+  printf("\n\nel teatro con la categoria 3 pierde: %f Bs.", acumulador3);
+  printf("\n\nel teatro con la categoria 4 pierde: %f Bs.", acumulador4);
+  printf("\n\nel teatro con la categoria 5 pierde: %f Bs.", acumulador5);
+  printf("\n\n===========================================\n");
+  printf("\nEl teatro registra una perdida todal de: %f Bs. ", total6);
+               getch();
+}
