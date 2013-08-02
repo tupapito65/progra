@@ -1,0 +1,28 @@
+
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : LUIS ALBERTO ANTELO MERCADO
+// Fecha      : 12 DE JULIO 2013
+// Descripcion: Calculo del Area de un triangulo.
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+void main()
+{float base, altura, area;
+printf("\n----------CALCULO DEL AREA DEL TRIANGULO----------");
+printf("\n--------------------------------------------------");
+printf("\n\n\n DEFINA ALTURA: ");
+scanf("%f", &altura); 
+printf("\n DEFINA BASE: ");
+scanf("%f", &base);
+if(altura>0 && base>0)
+ {area= (base*altura)/2;
+ printf("\n AREA ES: %f\n\n\n", area);
+ }
+else
+ printf("\n ERROR: AREA Y BASE TIENEN QUE SER MAYOR A CERO!!!");
+
+  getch();
+}
+
