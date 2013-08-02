@@ -1,0 +1,48 @@
+// Materia : Introduccion a la Programacion
+// Nombre : Sergio Andre Ortiz Peredo
+// Fecha : 26 DE Julio 2013
+// Descripcion: Ordenamiento de un vector mediante bubble sort.
+
+
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : LUIS ALBERTO ANTELO MERCADO
+// Fecha      : 2 DE AGOSTO 2013
+// Descripcion:bubble sort.
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+void main()
+{int i,j,vec[10],aux,n;
+printf("---------------BUBBLE SORT---------------\n\n");
+printf("\n Cantidad de terminos:");
+scanf("%d",&n);
+printf("-----------------------------------------");
+printf("\n Defina valores para el vector:\n\n");
+for(i=0;i<n;i++)           /*Cargar el vector*/
+ {printf(" vec[%d]=",i);
+  scanf("%d",&vec[i]);
+ }
+ printf("\n\n-----------------------------------------");
+ for(i=0;i<n-1;i++)           /*Bubble sort: ordena de menor a mayor*/
+  {for(j=i+1;j<n;j++) 
+    {if(vec[i]>vec[j]) 
+      {aux=vec[j];
+       vec[j]=vec[i];
+     vec[i]=aux;
+      }
+  
+    }
+  }
+ printf("\n\n El vector ordenado de menor a mayor es:\n\n");
+ for(i=0;i<n;i++) 
+ printf(" vec[%d]=%d\n",i,vec[i]);
+ printf("\n\n-----------------------------------------");
+ printf("\n\n Numero Mayor: %d",vec[n-1]);
+ printf("\n Numero Menor: %d",vec[0]);
+ printf("\n\n-----------------------------------------");
+         
+      getch();
+
+}
