@@ -1,0 +1,79 @@
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : LUIS ALBERTO ANTELO MERCADO
+// Fecha      : 2 DE AGOSTO 2013
+// Descripcion: Calculo del Area de un triangulo,cuadrado y circulo con menu
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+void triangulo(float base,float altura,float *area);
+void circulo(float radio,float pi,float*area);
+void cuadrado(float lado,float*area);
+
+void main()
+{int opcion;
+ float base,altura,area,radio,pi,lado;
+ pi=3.1416;
+do
+  {printf("\n\n|--------------MENU------------|");
+  printf("\n|1.-Calcular Area del triangulo|");
+  printf("\n|2.-Calcular Area del circulo  |");
+  printf("\n|3.-Calcular Area del cuadrado |");
+  printf("\n|0.-SALIR                      |");
+  printf("\n|------------------------------|\n");
+  printf("opcion: ");
+  scanf("%d",&opcion);
+  switch(opcion)
+  {case 1:do
+         {printf("\nDigite la base: ");
+          scanf("%f",&base); 
+  	  printf("\nDigite la altura: ");
+		  scanf("%f",&altura);
+		 }
+		 while(base<0 && altura<0);
+		  triangulo(base,altura,&area);
+		  printf("\nEl area del triangulo es: %f", area);
+		    getch();
+		  break;
+  case 2:do
+		  {printf("\nDigite el radio: ");
+		  scanf("%f",&radio);
+		  }
+		  while(radio<0);
+		  circulo(radio,pi,&area);
+		  printf("\nEl area del circulo es: %f", area);
+		    getch();
+		  break;
+  case 3:do
+		  {printf("\nDigite el lado: ");
+		  scanf("%f",&lado);
+		  }
+		  while(lado<0);
+		  cuadrado(lado,&area);
+		  printf("\nEl area del cuadrado es: %f", area);
+		    getch();
+		  break;
+  default:printf("\nDigite opcion correcta: ");
+	        getch();
+	      break;
+
+   }
+  }	
+  while(opcion!=0);
+  getch();
+}
+
+
+void triangulo(float base,float altura,float*area)
+{
+	*area=(base*altura)/2;
+}
+
+void circulo(float radio,float pi,float*area)
+{*area=pi*radio*radio;
+}
+
+void cuadrado(float lado,float*area)
+{*area=lado*lado;
+}
