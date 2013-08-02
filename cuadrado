@@ -1,0 +1,27 @@
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : LUIS ALBERTO ANTELO MERCADO
+// Fecha      : 2 DE AGOSTO 2013
+//Descripcion :Cauculo del cuadrado de un numero mediante sumas sucesivas
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+void main ()
+{int numero,suma,exponente,i;
+printf("\nELEVAR AL CUADRADO CON SUMAS SUCESIVAS \n");
+printf("\n--------------------------------------\n");
+printf("\nIngrese el numero que desea elevar: ");
+scanf("%d",&numero);
+
+i=0;
+suma=0;
+
+while(i!=numero)
+  {suma=suma+numero;
+
+i++;
+  }
+printf("\nEl cuadrado de %d es: %d \n\n", numero,suma);
+       getch();
+}
