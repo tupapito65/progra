@@ -1,0 +1,36 @@
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : LUIS ALBERTO ANTELO MERCADO
+// Fecha      : 2 DE AGOSTO 2013
+// Descripcion: 
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+#define NMAX 10
+
+void main()
+{
+  printf("\t\tMAYOR VALOR DE UN VECTOR\n");
+  
+  int i,aux,j,vec[NMax];
+  for(i=0;i<10;i++)
+	{
+		printf("Vec [ %d ]= ",i);
+		scanf("%d",&vec[i]);
+	}
+
+	for(i=0;i<9;i++)
+		for(j=i+1;j<10;j++)
+			if (vec[i] > vec[j])
+			{aux=vec[j];
+	            vec[j]=vec[i];
+				vec[i]=aux;
+			}
+		
+
+
+	printf("\nVec[ %d ]= %d",vec[i]);
+
+
+		getch();
+}
