@@ -1,0 +1,28 @@
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : LUIS ALBERTO ANTELO MERCADO
+// Fecha      : 2 DE AGOSTO 2013
+//Descripcion :Clasificacion de nadadores por edad.
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+
+void main()
+{int edad;
+printf("Edad: ");
+scanf("%d",&edad);
+if(edad>=5 && edad<=7)
+  printf("\n\n Usted se encuentra en la categoria Infantil A\n\n");
+if(edad>=8 && edad<=10)
+  printf("\n\n Usted se encuentra en la categoria Infantil B\n\n");
+if(edad>=11 && edad<=13)
+	printf("\n\n Usted se encuentra en la categoria Juvenil A\n\n");
+if(edad>=14 && edad<=17)
+	printf("\n\n Usted se encuentra en la categoria Juvenil B\n\n");
+if(edad>=18 && edad<=60)
+	printf("\n\n Usted se encuentra en la categoria Adulto\n\n ");
+if(edad>60)
+	printf("\n\n Usted se encuentra en la categoria Señor\n\n");
+     getch();
+}
