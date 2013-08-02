@@ -1,0 +1,36 @@
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : LUIS ALBERTO ANTELO MERCADO
+// Fecha      : 2 DE AGOSTO 2013
+//Descripcion :Calculo del peso ideal segun sexo.
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+#include "math.h"
+
+void main ()
+{float altura,hombres,mujeres;
+int opcion;
+   printf("\nPESO IDEAL\n");
+   printf("\n**********\n\n");
+   printf("ingrese su altura en metros:  ");
+   scanf("%f",&altura);
+   printf("\nsi es mujer introduzca el numero: 1\n\nsi es hombres introduzca el numero:2 \n\n");
+   scanf("%d",&opcion);
+    if(opcion==1)
+    {mujeres=(62.1*altura)-44.7;
+     printf("su peso ideal es: %f \n\n",mujeres );
+    }
+
+
+	else 
+	  {	if(opcion==2)  
+	     {hombres=(72.7*altura)-58; 
+	      printf("su peso ideal es: %f \n\n",hombres);
+     }
+	  else 
+	   {printf("ingrese una opcion valida\n\n");
+	   }
+	}
+getch();
+}
