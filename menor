@@ -1,0 +1,54 @@
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : LUIS ALBERTO ANTELO MERCADO
+// Fecha      : 2 DE AGOSTO 2013 
+//Descripcion :Carga 5 numeros y muestra cual es el menor.
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+void main ()
+{int numero1,numero2,numero3,numero4,numero5;
+ printf("\nMENOR DE 5 NUMEROS\n");
+ printf("\n******************\n\n");
+ printf("ingrese 5 numeros");
+ scanf("%d%d%d%d%d",&numero1,&numero2,&numero3,&numero4,&numero5);
+    if(numero1<numero2)
+  {  if(numero1<numero3)
+     {  
+  	   if(numero1<numero4)
+	           if(numero1<numero5)
+			    { printf("el numero menor es %d\n\n", numero1);
+	            }
+	   }
+
+	}
+	else 
+	{   if(numero2<numero3)
+	      { if(numero2<numero4)
+	         { if(numero2<numero5)
+			   { printf("el numero menor es %d\n\n", numero2);
+
+			   }
+	        }
+	     }
+
+	   else
+	   {   if(numero3<numero4)
+	             {if(numero3<numero5)
+				  printf("el numero menor es %d\n\n",numero3);
+	             }
+	      else
+		  { if(numero4<numero5)
+	           {printf("el numero menor es %d\n\n",numero4);
+	           }
+		    else
+		     {printf("el numero menor es %d\n\n", numero5);
+	         }
+
+	      }
+
+	   }
+	}
+getch();
+}
