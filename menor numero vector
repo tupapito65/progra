@@ -1,0 +1,56 @@
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : LUIS ALBERTO ANTELO MERCADO
+// Fecha      : 2 DE AGOSTO 2013
+//Descripcion :Programa que carga dos vectores y pasa a un tercer los terminos menores.
+
+#include "stdio.h"
+#include "stdafx.h"
+#include "conio.h"
+
+void leervector(int A[],char vec);
+void comparacion(int A[],int B[],int C[]);
+void mostrarvec(int A[],char vec);
+
+void main()
+{int A[10],B[10],C[10];char vec;
+printf("\nPrimer vector:\n");
+vec= 'A';
+leervector(A,vec);
+printf("\nSegundo vector:\n");
+vec= 'B';
+leervector(B,vec);
+comparacion(A,B,C);
+       getch();
+vec= 'A';
+mostrarvec(A,vec);
+printf("\n\n\n");
+vec= 'B';
+mostrarvec(B,vec);
+printf("\n\n\n");
+vec= 'C';
+mostrarvec(C,vec);
+        getch();
+}
+
+void leervector(int A[],char vec)
+{for(int i=0;i<10;i++)
+  {printf("%c[%d]: ",vec,i);  
+   scanf("%d",&A[i]);
+  }
+}
+
+void comparacion(int A[],int B[],int C[])
+{int i;
+for(i=0;i<10;i++)
+  {if(A[i]<B[i])
+    C[i]=A[i];
+  else
+  C[i]=B[i];
+  }
+}
+
+void mostrarvec(int A[],char vec)
+{int i;
+for(i=0;i<10;i++)
+  printf("\n%c[%d]= %d",vec,i,A[i]);
+}
