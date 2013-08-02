@@ -1,0 +1,22 @@
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : LUIS ALBERTO ANTELO MERCADO
+// Fecha      : 2 DE AGOSTO 2013
+// Descripcion: porcentaje 3 numero
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+void main()
+{float a,b,c,suma,PorA,PorB,PorC;
+printf("Ingrese 3 numeros: ");
+ scanf("%f",&a);
+ scanf("%f",&b);
+ scanf("%f",&c);
+ suma=a+b+c;
+ PorA=(a/suma)*100;
+ PorB=(b/suma)*100;
+ PorC=(c/suma)*100;
+ printf("Los porcentajes son: %f, %f, %f ",PorA,PorB,PorC);
+ getch();
+}
