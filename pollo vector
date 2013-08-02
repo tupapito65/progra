@@ -1,0 +1,85 @@
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : LUIS ALBERTO ANTELO MERCADO
+// Fecha      : 2 DE AGOSTO 2013
+// Descripcion: Calculo de la calidad y precio del un huevo
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+#define NMAX 100
+
+//prototipo de funcion
+
+void leervec(float granja[], float precio_kg[],int*g);/// no hace referencia a ninguna variable que no fuera  dentro del mismo 
+void mostrarvec(float granja[],float precio_kg[], int*g);
+
+// programa principal
+int main()
+{float granja[NMAX], precio_kg[NMAX];
+int g;
+printf("Introduza la cantidad de granjas\n");
+scanf("%d",&g);
+
+
+}
+
+
+// desarrollo de funcion
+void leervec(float granja[], float precio_kg[],int *g)
+{int i, j, n, huevo;
+ float promedio, calidad, altura, peso;
+ float suma=0;
+
+   
+	 for(j=1;j<=*g;j++)
+		{	printf("\n \t introduzca la cantidad de gallinas\n\t");
+			scanf("%d",&n);
+	
+			for(i=1;i<=n;i++)
+			{
+				printf("ingrese el peso del pollo\n");
+				scanf("%f",&peso);
+				printf("ingrese la altura del pollo en metros\n");
+				scanf("%f",&altura);
+				printf("ingrese el numero de huevos que pone la gallina\n");
+				scanf("%d",&huevo);
+				calidad=(peso*altura)/huevo;
+				suma=suma+calidad;
+			}
+
+			promedio=suma/n;
+			if(promedio>=15)
+			{
+				precio_kg[j]=(1.2*promedio);
+				printf("\nEl precio por kg es: %f", precio_kg[j]);
+			}
+			else
+			{
+				if(promedio>8)
+				{
+					precio_kg[j]=(1*promedio);
+					printf("\nEl precio por kg es: %f", precio_kg[j]);
+				}
+				else
+				{
+					precio_kg[j]=(0.8*promedio);
+					printf("\nEl precio por kg es: %f", precio_kg[j]);
+				}
+
+			}
+	    granja[j]=promedio;
+		} 
+}
+
+void mostrarvec(float granja[], float peso_kg[],int *g)
+{int i;
+ 
+	for(i=1; i<=*g;i++)
+			{
+				printf("\n Promedio de granja: [%d]=\t",i);
+				printf("%f",granja[i]);
+				printf("\n Peso en kilogramo: [%d]=\t",i);
+				printf("%f", peso_kg[i]);
+			}
+	getch();
+}
