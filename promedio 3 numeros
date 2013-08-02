@@ -1,0 +1,29 @@
+// Materia    : INTRODUCCION A LA PROGRAMACION
+// Nombre     : LUIS ALBERTO ANTELO MERCADO
+// Fecha      : 2 DE AGOSTO 2013
+//Descripcion :Programa que calcula el promedio que representan 3 numeros respecto a la suma de los 3.
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+void main()
+{float numero1,numero2,numero3,suma1,suma2,suma3,sumat; 
+   printf("\t\tPORCENTAJE \n");
+   printf("\t\t==========\n\n");
+   printf("ingrese 3 numeros:");
+   scanf("%f %f %f",&numero1, &numero2, &numero3);
+     if(numero1<0 && numero2<0 && numero3<0)
+     printf("ingrese numeros mayores a 0");
+   else 
+	 {sumat=numero1+numero2+numero3;
+      suma1=(numero1/sumat)*100;
+      suma2=(numero2/sumat)*100;
+	  suma3=(numero3/sumat)*100;
+	 }
+
+   printf("\nel primer numero tiene un porcentaje de: %f porciento " ,suma1);
+   printf("\n\nel segundo numero tiene un porcentaje de: %f porciento",suma2);
+   printf("\n\nel tercer numero tiene un porcentaje de: %f porciento\n\n",suma3);
+   getch();
+}
